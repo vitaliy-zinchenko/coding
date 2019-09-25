@@ -13,14 +13,11 @@ public class _3_LongestSubstringWithoutRepeatingCharacters {
 
         for(int curr = 0; curr < s.length(); curr++) {
             Character c = s.charAt(curr);
-            if(win.containsKey(c) && win.get(c) >= start) {
-                start = win.get(c) + 1;
+            if(win.containsKey(c)) {
+                start = Math.max(start, win.get(c) + 1);
             }
             win.put(c, curr);
-            int newMax = curr - start + 1;
-            if(newMax > max) {
-                max = newMax;
-            }
+            max = Math.max(max, curr - start + 1);
         }
         return max;
     }
