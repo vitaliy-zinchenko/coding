@@ -1,5 +1,9 @@
 package zinjvi.donnemartin.recursion_and_dynamic_programming;
 
+import zinjvi.Utils;
+
+import static zinjvi.Utils.assertTrue;
+
 public class _1_Fibonacci {
 
     // n      = 0 1 2 3 4 5 6 7  8
@@ -20,6 +24,7 @@ public class _1_Fibonacci {
 
     // O(2^n)
     public int recursive(int n) {
+        System.out.println(n);
         if(n <= 1) {
             return n;
         } else {
@@ -29,11 +34,12 @@ public class _1_Fibonacci {
 
     // O(n)
     public int dynamic(int n) {
-        int[] cache = new int[n];
+        int[] cache = new int[n+1];
         return resursiveDynamic(n, cache);
     }
 
     private int resursiveDynamic(int n, int[] cache) {
+        System.out.println(n);
         if(n <= 1) {
             return n;
         } else if(cache[n] != 0) {
@@ -45,26 +51,27 @@ public class _1_Fibonacci {
     }
 
     public static void main(String[] args) {
-        assert new _1_Fibonacci().iterative(0) == 0;
-        assert new _1_Fibonacci().iterative(1) == 1;
-        assert new _1_Fibonacci().iterative(1) == 1;
-        assert new _1_Fibonacci().iterative(2) == 1;
-        assert new _1_Fibonacci().iterative(3) == 2;
-        assert new _1_Fibonacci().iterative(8) == 21;
+//        assertTrue(new _1_Fibonacci().iterative(0) == 0);
+//        assertTrue(new _1_Fibonacci().iterative(1) == 1);
+//        assertTrue(new _1_Fibonacci().iterative(1) == 1);
+//        assertTrue(new _1_Fibonacci().iterative(2) == 1);
+//        assertTrue(new _1_Fibonacci().iterative(3) == 2);
+//        assertTrue(new _1_Fibonacci().iterative(8) == 21);
+//
+//        assertTrue(new _1_Fibonacci().recursive(0) == 0);
+//        assertTrue(new _1_Fibonacci().recursive(1) == 1);
+//        assertTrue(new _1_Fibonacci().recursive(1) == 1);
+//        assertTrue(new _1_Fibonacci().recursive(2) == 1);
+//        assertTrue(new _1_Fibonacci().recursive(3) == 2);
+//        assertTrue(new _1_Fibonacci().recursive(8) == 21);
 
-        assert new _1_Fibonacci().recursive(0) == 0;
-        assert new _1_Fibonacci().recursive(1) == 1;
-        assert new _1_Fibonacci().recursive(1) == 1;
-        assert new _1_Fibonacci().recursive(2) == 1;
-        assert new _1_Fibonacci().recursive(3) == 2;
-        assert new _1_Fibonacci().recursive(8) == 21;
 
-        assert new _1_Fibonacci().dynamic(0) == 0;
-        assert new _1_Fibonacci().dynamic(1) == 1;
-        assert new _1_Fibonacci().dynamic(1) == 1;
-        assert new _1_Fibonacci().dynamic(2) == 1;
-        assert new _1_Fibonacci().dynamic(3) == 2;
-        assert new _1_Fibonacci().dynamic(8) == 21;
+//        assertTrue(new _1_Fibonacci().dynamic(0) == 0);
+//        assertTrue(new _1_Fibonacci().dynamic(1) == 1);
+//        assertTrue(new _1_Fibonacci().dynamic(1) == 1);
+//        assertTrue(new _1_Fibonacci().dynamic(2) == 1);
+//        assertTrue(new _1_Fibonacci().dynamic(3) == 2);
+        assertTrue(new _1_Fibonacci().dynamic(8) == 21);
 
         System.out.println("end");
     }
