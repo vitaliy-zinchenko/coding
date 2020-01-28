@@ -7,6 +7,25 @@ public class _121_BestTimeToBuyandSellStock {
     // Time: O(n)
     // Space: O(1)
     public static int maxProfit(int[] prices) {
+        if (prices.length <= 1) {
+            return 0;
+        }
+        int maxProfit = 0;
+        int minPrice = prices[0];
+        for (int i = 1; i < prices.length; i++) {
+            maxProfit = Math.max(
+                    // Profit of the best transaction before today
+                    maxProfit,
+                    // Profit if I buy for the best price and sell current day
+                    prices[i] - minPrice);
+            minPrice = Math.min(minPrice, prices[i]);
+        }
+        return maxProfit;
+    }
+
+    // Time: O(n)
+    // Space: O(1)
+    public static int maxProfit2(int[] prices) {
         if (prices.length == 0) {
             return 0;
         }
