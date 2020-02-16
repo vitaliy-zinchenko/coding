@@ -2,8 +2,6 @@ package zinjvi.dynamic;
 
 import org.junit.Assert;
 
-import java.util.Arrays;
-
 // LeetCode: 96. Unique Binary Search Trees
 // https://www.youtube.com/watch?v=GgP75HAvrlY&list=PLiQ766zSC5jM2OKVr8sooOuGgZkvnOCTI&index=10
 public class UniqueBinarySearchTrees {
