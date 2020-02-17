@@ -6,7 +6,7 @@
 
 Implement an algorithm to determine if a string has all unique 
 characters. What if you cannot use additional data structures?  
-[My Solution](src/main/java/zinjvi/arrays_strings/IsUnique.java) 
+[Solution](src/main/java/zinjvi/arrays_strings/IsUnique.java) 
 
 ## Bit manipulations
 
@@ -30,4 +30,13 @@ EXAMPLE
 Input: N 10011, i 2, j 6  
 Output: N 10001001100
 
-[My Solution](src/main/java/zinjvi/bit_manipulations/Insertion.java)
+[Solution](src/main/java/zinjvi/bit_manipulations/Insertion.java)
+
+### 5.2 Binary to String
+
+Given a real number between 0 and 1 (e.g., 0.72) that is 
+passed in as a double, print the binary representation.
+If the number cannot be represented accurately in binary 
+with at most 32 characters, print "ERROR"
+
+[Solution](src/main/java/zinjvi/bit_manipulations/BinaryToString.java)
