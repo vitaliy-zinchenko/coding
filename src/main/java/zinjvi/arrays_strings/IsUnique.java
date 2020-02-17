@@ -39,11 +39,21 @@ public class IsUnique {
         return true;
     }
 
+    public static boolean isUniqueBitManipulations(String s) {
+        // FINISH
+        return false;
+    }
+
     public static void main(String[] args) {
         Assert.assertEquals(true, isUnique("qwer"));
         Assert.assertEquals(false, isUnique("qwerwg"));
         Assert.assertEquals(true, isUnique(""));
         Assert.assertEquals(false, isUnique(StringUtils.repeat("a", 128)));
+
+        Assert.assertEquals(true, isUniqueBitManipulations("qwer"));
+        Assert.assertEquals(false, isUniqueBitManipulations("qwerwg"));
+        Assert.assertEquals(true, isUniqueBitManipulations(""));
+        Assert.assertEquals(false, isUniqueBitManipulations(StringUtils.repeat("a", 128)));
     }
 
 }
